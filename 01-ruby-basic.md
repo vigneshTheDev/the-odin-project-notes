@@ -173,3 +173,33 @@ puts b
 ```
 
 ### Symbols
+A symbol is like a string. But immutable. 
+So, same symbols point to the same value in memory
+```ruby
+:symbol.equal?(:symbol)
+# => true
+
+"string".equal?("string)
+# => false
+
+:symbol.object_id == :symbol.object_id
+# => true
+
+"string".object_id == "string".object_id
+# => false
+```
+
+### Boolean
+```ruby
+true
+false
+```
+
+### Nil
+Everything in Ruby has a return value. If there's nothing to return, nil is returned
+And as everything in ruby is an object, nil is an object too
+```ruby
+nil.to_s
+# => ""
+```
+NULL Pointer what?
