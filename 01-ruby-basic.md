@@ -111,7 +111,7 @@ puts 'Hello #{name}' # => "Hello #{name}" <- doesn't work with single quotes :|
 
 But single quotes are sliiightly faster they say ¯\(ツ)/¯
 
-Methods
+#### Methods
 ```ruby
 "hello".capitalize
 # => "Hello"
@@ -158,8 +158,6 @@ Methods
 "hello".delete("l")
 # => "heo"
 ```
-
----
 
 > Strings are mutable :o
 ```ruby
