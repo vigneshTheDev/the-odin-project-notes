@@ -159,6 +159,7 @@ Methods
 # => "heo"
 ```
 
+---
 
 > Strings are mutable :o
 ```ruby
