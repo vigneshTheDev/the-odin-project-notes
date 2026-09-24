@@ -1,24 +1,24 @@
 require 'minitest/autorun'
 require_relative 'caesar_cipher'
 
-describe "CaesarCipher.caesar_cipher" do
-  it "must shift lowercase" do
-    _(CaesarCipher.caesar_cipher("hi", 5)).must_equal("mn")
+class CaesarCipherTest < Minitest::Test
+  def test_must_shift_lowercase
+    assert_equal 'mn', CaesarCipher.caesar_cipher('hi', 5)
   end
 
-  it "must shift uppercase" do
-    _(CaesarCipher.caesar_cipher("HI", 5)).must_equal("MN")
+  def test_must_shift_uppercase
+    assert_equal 'MN', CaesarCipher.caesar_cipher('HI', 5)
   end
 
-  it "must preserve case" do
-    _(CaesarCipher.caesar_cipher("Hi", 5)).must_equal("Mn")
+  def test_must_preserve_case
+    assert_equal 'Mn', CaesarCipher.caesar_cipher('Hi', 5)
   end
 
-  it "must preserve spaces and puctuations" do
-    _(CaesarCipher.caesar_cipher("What a string!", 5)).must_equal("Bmfy f xywnsl!")
+  def test_must_preserve_spaces_punctuations
+    assert_equal 'Bmfy f xywnsl!', CaesarCipher.caesar_cipher('What a string!', 5)
   end
 
-  it "must wrap around after z and Z" do
-    _(CaesarCipher.caesar_cipher("xyzXYZ", 3)).must_equal("abcABC")
+  def test_must_wrap_around
+    assert_equal 'abcABC', CaesarCipher.caesar_cipher('xyzXYZ', 3)
   end
 end
